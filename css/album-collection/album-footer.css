@@ -1,0 +1,78 @@
+section.about-band {
+  width: 100%;
+  padding: 2vw;
+}
+
+.container-album-footer {
+  margin-top: 10vh;
+  padding: 2vw;
+  background: rgb(111, 111, 111, 0.1);
+  border-radius: 0.5vw;
+}
+
+.container-about-band {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 1vw;
+}
+
+.container-image-about-band {
+  width: auto;
+  overflow: hidden;
+  position: relative;
+}
+
+.container-image-about-band:hover>img {
+  transform: scale(1.1);
+}
+
+.container-image-about-band:hover>span {
+  opacity: 1;
+  top: 0;
+  left: 0;
+}
+
+.container-image-about-band img {
+  width: 100%;
+  max-width: 35vw;
+  height: auto;
+  border-radius: 0.5vw;
+}
+
+.container-image-about-band span {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  top: 0;
+  left: -100%;
+  opacity: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container-image-about-band span img {
+  width: 100%;
+  max-width: 20vw;
+}
+
+.about-band-detail {
+  width: 50%;
+  padding: 1vw;
+}
+
+.about-band-detail p {
+  color: var(--main-color-text-light);
+  letter-spacing: 2px;
+  text-align: justify;
+}
+
+.about-band-detail p:nth-child(2) {
+  margin-top: 2vh;
+}
+@media (max-width:900px) {
+  .container-image-about-band img{
+  max-width: 80vw;
+  }
+}

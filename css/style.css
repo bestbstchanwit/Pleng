@@ -1,0 +1,188 @@
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@100;200;300;400&display=swap");
+
+* {
+  font-family: "Kanit", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  outline: none;
+  border: none;
+  transition: all 0.3s linear;
+}
+
+*::selection {
+  background: var(--main-theme-color);
+  color: #333;
+}
+
+body {
+  background: linear-gradient(180deg, #1b1b1b 0%, #111 45%, #000 100%);
+}
+
+:root {
+  --main-theme-color: #0ebeff;
+  /* light mode */
+  --main-background-light: #e1e1e1;
+  --main-color-text-light: #e1e1e1;
+  /* dark mode */
+  --main-background-dark: #333333;
+  --main-color-text-dark: #000;
+}
+
+/* scroll bar */
+html::-webkit-scrollbar {
+  width: 0.9vw;
+  overflow-x: hidden;
+}
+
+html::-webkit-scrollbar-track {
+  background: var(--main-color-text-dark);
+}
+
+html::-webkit-scrollbar-thumb {
+  background: rgba(250, 250, 250, 0.2);
+}
+
+/* ----------------------------------- */
+/* index video banner  */
+.video-container iframe {
+  position: fixed;
+  right: -300px;
+  bottom: 0;
+  min-width: 100vw;
+  min-height: 100vh;
+  height: 100vh;
+  pointer-events: none;
+}
+
+.video-container {
+  z-index: 1;
+}
+
+.container-button {
+  position: absolute;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+a.button-enter-website {
+  padding: 1vw 2vw;
+  display: inline-block;
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.4);
+  background: transparent;
+  opacity: 1;
+  font-size: 3rem;
+  transition: 0.3s;
+  border: 2px solid transparent;
+}
+
+a.button-enter-website:hover {
+  /* border: 2px solid #fff; */
+  /* background-color: transparent; */
+  color: rgba(255, 255, 255, 1);
+}
+
+a.button-enter-website span {
+  display: block;
+  position: absolute;
+  background: var(--main-color-text-dark);
+}
+
+a.button-enter-website span:nth-child(1) {
+  left: 0;
+  bottom: 0;
+  width: 0.3vw;
+  height: 100%;
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform 0.3s;
+}
+
+a.button-enter-website:hover span:nth-child(1) {
+  transform: scaleY(1);
+  transform-origin: bottom;
+  transition: transform 0.3s;
+}
+
+a.button-enter-website span:nth-child(2) {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 0.3vh;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s;
+}
+
+a.button-enter-website:hover span:nth-child(2) {
+  transform: scaleX(1);
+  transform-origin: left;
+  transition: transform 0.3s;
+}
+
+a.button-enter-website span:nth-child(3) {
+  right: 0;
+  bottom: 0;
+  width: 0.3vw;
+  height: 100%;
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform 0.3s;
+  transition-delay: 0.3s;
+}
+
+a.button-enter-website:hover span:nth-child(3) {
+  transform: scaleY(1);
+  transform-origin: bottom;
+  transition: transform 0.3s;
+  transition-delay: 0.3s;
+}
+
+a.button-enter-website span:nth-child(4) {
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 0.3vh;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s;
+  transition-delay: 0.3s;
+}
+
+a.button-enter-website:hover span:nth-child(4) {
+  transform: scaleX(1);
+  transform-origin: left;
+  transition: transform 0.3s;
+  transition-delay: 0.3s;
+}
+
+@media only screen and (min-width: 768px) {
+  .video-container iframe {
+    width: 100vw;
+    height: auto;
+    right: 0;
+  }
+}
+
+/* ---------------------------------------------------------- */
+
+/* -------------------Container------------------------------ */
+.container-index {
+  height: 100vh;
+  margin-left: 17%;
+  margin-top: 5%;
+  padding: 2vw;
+}
+
+.container-body {
+  background: linear-gradient(180deg, #1b1b1b 0%, #111 45%, #000 100%);
+  height: 154vh;
+}

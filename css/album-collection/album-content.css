@@ -1,0 +1,106 @@
+.container-album-content {
+  padding: 2vw;
+}
+
+.container-album-content h1 {
+  color: var(--main-color-text-light);
+}
+
+.container-album-content table.popular-music {
+  width: auto;
+  padding: 1vw;
+  color: var(--main-color-text-light);
+  border-spacing: 0;
+}
+
+.container-album-content table.popular-music tr {
+  padding: 0.5vw;
+  border: 1px solid #fff;
+}
+
+.container-album-content table.popular-music tr:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.container-album-content table.popular-music tr:hover>.table-td.td-like,
+.container-album-content table.popular-music tr:hover>.table-td.td-eye {
+  opacity: 1;
+}
+
+.container-album-content table.popular-music tr td img {
+  width: 100%;
+  min-width: 2vw;
+  height: auto;
+  min-height: 2vh;
+}
+
+.table-td {
+  padding: 0.3vw 0.3vw 0 0.3vw;
+}
+
+.table-td.td-no {
+  text-align: center;
+  width: 2vw;
+  border-radius: 0.5vw 0 0 0.5vw;
+}
+
+.table-td.td-name {
+  width: 20vw;
+}
+
+.table-td.td-img {
+  width: 3vw;
+}
+
+.table-td.td-name {
+  text-align: left;
+}
+
+.table-td.td-view {
+  width: 10vw;
+  text-align: right;
+}
+
+.table-td.td-time,
+.table-td.td-eye {
+  width: 2vw;
+}
+
+.table-td.td-eye {
+  opacity: 0;
+}
+
+.table-td.td-like {
+  width: 2vw;
+  text-align: center;
+  opacity: 0;
+}
+
+.table-td.td-spotify {
+  border-radius: 0vw 0.5vw 0.5vw 0;
+}
+
+.table-td.td-youtube,
+.table-td.td-spotify {
+  width: 4vw;
+  text-align: right;
+}
+
+.table-td.td-like a,
+.table-td.td-youtube a,
+.table-td.td-spotify a {
+  color: var(--main-color-text-light);
+  padding: 0.5vw;
+}
+
+.table-td.td-like a:hover {
+  color: var(--main-theme-color);
+}
+
+.table-td.td-youtube a:hover {
+  color: #f70000;
+}
+
+.table-td.td-spotify a:hover {
+  color: #1dd05d;
+}

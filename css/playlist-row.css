@@ -1,0 +1,103 @@
+.main-container-playlist-row {
+  margin: 0 0 2vw 0;
+}
+
+.container-index .main-container-playlist-row .title-playlist-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--main-color-text-light);
+}
+
+.container-index .main-container-playlist-row .title-playlist-row h1,
+.container-index .main-container-playlist-row .title-playlist-row a {
+  margin: 1vw 0;
+}
+
+.container-index .main-container-playlist-row .title-playlist-row a {
+  opacity: 0.6;
+  color: var(--main-color-text-light);
+}
+
+.container-index .main-container-playlist-row .title-playlist-row h1:hover,
+.container-index .main-container-playlist-row .title-playlist-row a:hover {
+  text-decoration: underline;
+  opacity: 1;
+}
+
+.container-index .container-playlist-row {
+  display: flex;
+  column-gap: 1.5vw;
+  overflow: hidden;
+}
+
+.container-index .container-playlist-row .content-playlist-detail h1 {
+  font-size: 1.5rem;
+  color: var(--main-color-text-light);
+  transition: 0.6s;
+}
+
+.container-index .container-playlist-row .content-playlist-detail h1:hover {
+  text-decoration: underline;
+}
+
+.container-index .container-playlist-row .content-playlist {
+  background: rgba(0, 0, 0, 0.4);
+  max-width: 200px;
+  height: 300px;
+  border-radius: 0.3vw;
+  position: relative;
+  transition: 0.3s;
+  padding: 1vw;
+}
+
+.container-index .container-playlist-row .content-playlist a:hover .play-button-icon {
+  display: block;
+  bottom: 40%;
+  opacity: 1;
+}
+
+.container-index .container-playlist-row .content-playlist .play-button-icon {
+  position: absolute;
+  right: 11%;
+  bottom: 35%;
+  font-size: 3rem;
+  display: block;
+  filter: invert(65%) sepia(34%) saturate(7102%) hue-rotate(170deg) brightness(109%) contrast(102%);
+  transition: 0.3s;
+  opacity: 0;
+  color: #000;
+}
+
+.container-index .container-playlist-row .content-playlist:hover {
+  background: rgba(100, 100, 100, 0.1);
+}
+
+.container-index .container-playlist-row .content-playlist img {
+  width: 100%;
+  max-width: 10vw;
+  height: auto;
+  min-height: 20vh;
+  background-size: auto;
+  border-radius: 0.3vw;
+}
+
+.container-index .container-playlist-row .playlist-hit {
+  display: flex;
+  flex-wrap: wrap;
+  float: bottom;
+}
+
+.container-index .container-playlist-row .playlist-hit p {
+  margin-right: 0.3vw;
+}
+
+.container-index .container-playlist-row .playlist-hit a {
+  color: var(--main-color-text-light);
+  font-size: 0.8rem;
+  opacity: 0.5;
+}
+
+.container-index .container-playlist-row .playlist-hit a:hover {
+  opacity: 1;
+}

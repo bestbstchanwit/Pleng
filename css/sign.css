@@ -1,0 +1,222 @@
+
+.container {
+	width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 10vw;
+}
+
+.container-flip-card {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	transform-style: preserve-3d;
+	transition: all 0.5s ease-in-out;
+	z-index: 1;
+}
+
+.container-flip-card .front,
+.container-flip-card .back {
+  width: 100%;
+  height: 100%;
+	position: absolute;
+	text-align: center;
+	backface-visibility: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.container-flip-card .back {
+	transform: rotateY(180deg);
+	color: #000;
+}
+
+
+input {
+	display: block;
+}
+
+#btnCheck:checked ~ .container-flip-card {
+	transform: rotateY(180deg);
+}
+#btnCheck:checked ~ .container-flip-card .front{
+    opacity: 0;
+}
+
+
+.background-form-front,
+.background-form-back{
+	position: relative;
+  width: 100%;
+}
+ .background-form-front img.bg-image-form-signin{
+    transform: rotate(180deg);
+    width: 100%;
+    max-width: 60vw;
+    border-radius: 20px;
+}
+ .background-form-back img.bg-image-form-signup{
+    width: 100%;
+    max-width: 60vw;
+    border-radius: 20px;
+}
+.signup-form{
+    top: 20%;
+    left: 17%;
+    position: absolute;
+    padding: 1vw;
+    width: 25vw;
+    height: 55vh;
+    border-radius: 1vw;
+    background: rgba(255, 255, 255, 0.1);
+    filter: blur(0px);
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 20px 20px 50px rgb(0 0 0 / 50%)
+}
+.signin-form{
+    top: 20%;
+    right: 17%;
+    position: absolute;
+    padding: 1vw;
+    width: 25vw;
+    height: 55vh;
+    border-radius: 1vw;
+    background: rgba(255, 255, 255, 0.1);
+    filter: blur(0px);
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 20px 20px 50px rgb(0 0 0 / 50%)
+}
+.signup-form h1,.signin-form h1{
+    color: #fff;
+    margin: 0 0 1.5vw 0;
+}
+.signup-header-logo{
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 5%;
+    left: 23%;
+}
+.signin-header-logo{
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 5%;
+    right: 23%;
+}
+ .logo {
+    position: relative;
+    font-weight: 700;
+    color: var(--main-color-text-light);
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    transition: 0.6s;
+    font-size: 2rem;
+    
+  }
+  .signup-header-logo img,
+  .signin-header-logo img {
+    width: 100%;
+    max-width: 2.5vw ;
+    margin: 1vw;
+    filter: invert(99%) sepia(65%) saturate(52%) hue-rotate(203deg) brightness(118%) contrast(76%);
+  }
+  .form-input{
+      margin: 0.7vw 1vw;
+      font-size: 1.5rem;
+      display: flex;
+      align-items: center;
+      text-align: center;
+      padding: 0.5vw;
+      border-radius: 0.5vw;
+      background: rgba(255, 255, 255, 0.1);
+      filter: blur(0px);
+      
+  }
+  .form-input i{
+      min-width: 2vw;
+      color: #fff;
+  }
+  .form-input .input-sign{
+      margin: 0 0.5vw;
+      padding: 0.5vw;
+      width: 100%;
+      background: transparent;
+      color: #fff;
+      border-bottom: 1px solid transparent;
+  }
+  .form-input .input-sign:focus{
+    background: transparent;
+    border-bottom: 1px solid #fff;
+      
+  }
+input#btnCheck{
+	display: none;
+}
+#btnCheckSign{
+	top: 0;
+	right: 0;
+	position: absolute;
+	margin: 1vw;
+	padding: 1vw;
+	cursor: pointer;
+	background: #000;
+	color: #fff;
+  border-radius: 20px;
+}
+#btnCheckSign:hover{
+    color: #000;
+	background: #fff
+}
+.SignBtn::after{
+  content: "Add new account";
+
+}
+.SignIN::after{
+  content: "Sign in";
+}
+.submit-form{
+  text-transform: uppercase;
+  cursor: pointer;
+  padding: 1vw;
+  width: 100%;
+  margin-top: 1vw;
+  border-radius: 15px;
+  letter-spacing: 1px;
+  font-size: 1.3rem;
+  background: var(--main-background-light);
+  color: var(--main-color-text-dark);
+  
+}
+.submit-form:hover{
+  background: var(--main-color-text-dark);
+  color: var(--main-color-text-light);
+}
+.backHome{
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 1vw;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+.backHome a{
+  background: var(--main-color-text-dark);
+  color: var(--main-color-text-light);
+  padding: 1vw;
+  border-radius: 50%;
+  
+}
+.backHome:hover >  a {
+  background: var(--main-background-light);
+  color: var(--main-color-text-dark);
+}
